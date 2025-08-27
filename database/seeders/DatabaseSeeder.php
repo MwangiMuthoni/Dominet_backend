@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
                     PermissionSeeder::class,
                     CompanySeeder::class,
                     UserSeeder::class,
-                    CountrySeeder::class,
+                    //CountrySeeder::class,
                     
                 ]);
 

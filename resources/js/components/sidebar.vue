@@ -20,19 +20,6 @@
         </template>
         Home
       </vs-sidebar-item>
-
-      <vs-sidebar-item
-        id="company"
-        to="/company"
-        class="only-desktop"
-        v-if="user.permissions.includes('View company')"
-        style="color: white !important;"
-      >
-        <template #icon>
-          <i class="fa-solid fa-building-columns"></i>
-        </template>
-        Companies
-      </vs-sidebar-item>
       
       
       <vs-sidebar-item

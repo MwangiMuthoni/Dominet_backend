@@ -22,7 +22,7 @@ class UserResource extends JsonResource
             'password' => $this->password,
             'company_id'=> $this->company_id,
             'company'=>$this->company,
-            'subscription'=> ($this->company_id==null)? new SubscriptionResource($this->subscription) : new SubscriptionResource($this->company->subscription),
+           // 'subscription'=> ($this->company_id==null)? new SubscriptionResource($this->subscription) : new SubscriptionResource($this->company->subscription),
 
             'accepted_terms'=> $this->accepted_terms,
             'role_id' => $this->role_id,

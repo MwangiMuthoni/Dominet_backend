@@ -8,7 +8,7 @@ use App\Policies\UserPolicy;
 use App\Policies\PrototypePolicy;
 use App\Policies\CompanyPolicy;
 use App\Policies\PackagePolicy;
-use App\Policies\SubscriptionPolicy;
+//use App\Policies\SubscriptionPolicy;
 use App\Policies\BillPolicy;
 use App\Policies\PaymentPolicy;
 
@@ -20,7 +20,7 @@ use App\Models\User;
 use App\Models\Prototype;
 use App\Models\Company;
 use App\Models\Package;
-use App\Models\Subscription;
+//use App\Models\Subscription;
 use App\Models\Bill;
 use App\Models\Payment;
 
@@ -42,7 +42,7 @@ class AuthServiceProvider extends ServiceProvider
         Prototype::class => PrototypePolicy::class,
         Company::class => CompanyPolicy::class,
         Package::class => PackagePolicy::class,
-        Subscription::class => SubscriptionPolicy::class,
+        //Subscription::class => SubscriptionPolicy::class,
         Bill::class => BillPolicy::class,
         Payment::class => PaymentPolicy::class,
     ];

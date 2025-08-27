@@ -6,7 +6,6 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use App\Models\Company;
 use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
@@ -19,65 +18,73 @@ class UserSeeder extends Seeder
     public function run()
     {
         //
-        $firstCompanyId = Company::first()->id;
 
-        $user=User::create([
-            'id' => Str::uuid(), 
-            'name'=>'Spa Admin', 
-            'phone'=>'+254700000000', 
-            'email'=>'admin@spa.com', 
-            'password'=>Hash::make('spa101'), 
-            'role_id'=>1
+        $user = User::create([
+            'name' => 'Spa Admin',
+            'phone' => '+254700000000',
+            'email' => 'admin@spa.com',
+            'password' => Hash::make('spa101'),
+            'role_id' => 1
         ]);
 
-        $user->syncRoles(['Super admin']);
-        
-        $permissions=array();
-        foreach($user->role->permissions as $permission){
-                    $permissions[]=$permission->name;
-                }
+        $user->syncRoles(['Super Admin']);
+
+        $permissions = array();
+        foreach ($user->role->permissions as $permission) {
+            $permissions[] = $permission->name;
+        }
         $user->syncPermissions($permissions);
 
-        $company_admin=User::create([
-            'id' => Str::uuid(), 
-            'name'=>'Company Admin', 
-            'phone'=>'+254700000000', 
-            'email'=>'admin@company.com', 
-            'password'=>Hash::make('company101'), 
-            'role_id'=>2, 
-            'company_id'=> $firstCompanyId
-        ]);
-        $company_admin->syncRoles(['Company admin']);
-        
-        $permissions=array();
-        foreach($company_admin->role->permissions as $permission){
-                    $permissions[]=$permission->name;
-                }
-        $company_admin->syncPermissions($permissions);
+        // //Teacher
+        // $teacher = User::create([
+        //     'name' => 'Test Teacher',
+        //     'phone' => '+254700000000',
+        //     'email' => 'teacher@spa.com',
+        //     'password' => Hash::make('spa101'),
+        //     'role_id' => 2
+        // ]);
 
-        // $agentData = [
-        //     ['name' => 'Alex Johnson', 'email' => 'agent1@company.com', 'password' => 'agent101'],
-        //     ['name' => 'Jordan Lee', 'email' => 'agent2@company.com', 'password' => 'agent102'],
-        //     ['name' => 'Taylor Morgan', 'email' => 'agent3@company.com', 'password' => 'agent103'],
-        // ];
+        // $teacher->syncRoles(['Teacher']);
 
-        // foreach ($agentData as $data) {
-        //     $companyAgent = User::create([
-        //         'name' => $data['name'],
-        //         'phone' => '+254700000000',
-        //         'email' => $data['email'],
-        //         'password' => Hash::make($data['password']),
-        //         'role_id' => 3,
-        //         'company_id'=> $firstCompanyId
-        //     ]);
-        //     $companyAgent->syncRoles(['Company agent']);
-            
-        //     $companyAgentPermissions = [];
-        //     foreach ($companyAgent->role->permissions as $permission) {
-        //         $companyAgentPermissions[] = $permission->name;
-        //     }
-        //     $companyAgent->syncPermissions($companyAgentPermissions);
+        // $permissions = array();
+        // foreach ($teacher->role->permissions as $permission) {
+        //     $permissions[] = $permission->name;
         // }
+        // $teacher->syncPermissions($permissions);
+
+        // //Guardian
+        // $guardian = User::create([
+        //     'name' => 'Test Guardian',
+        //     'phone' => '+254700000000',
+        //     'email' => 'guardian@spa.com',
+        //     'password' => Hash::make('spa101'),
+        //     'role_id' => 3
+        // ]);
+
+        // $guardian->syncRoles(['Guardian']);
+
+        // $permissions = array();
+        // foreach ($guardian->role->permissions as $permission) {
+        //     $permissions[] = $permission->name;
+        // }
+        // $guardian->syncPermissions($permissions);
+
+        // //Student
+        // $student = User::create([
+        //     'name' => 'Test Student',
+        //     'phone' => '+254700000000',
+        //     'email' => 'student@spa.com',
+        //     'password' => Hash::make('spa101'),
+        //     'role_id' => 4
+        // ]);
+
+        // $student->syncRoles(['Student']);
+
+        // $permissions = array();
+        // foreach ($student->role->permissions as $permission) {
+        //     $permissions[] = $permission->name;
+        // }
+        // $student->syncPermissions($permissions);
 
     }
 }
