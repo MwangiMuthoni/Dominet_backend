@@ -1,0 +1,159 @@
+[
+    {
+        "permissions": [
+            "Create company",
+            "Edit company",
+            "View company",
+            "Delete company",
+
+            "Create package",
+            "Edit package",
+            "View package",
+            "Delete package",
+
+            "Create bill",
+            "Edit bill",
+            "View bill",
+            "Delete bill",
+
+            "Create payment",
+            "Edit payment",
+            "View payment",
+            "Delete payment",
+
+            "Create subscription",
+            "Edit subscription",
+            "View subscription",
+            "Delete subscription",
+
+            "Create prototype",
+            "Edit prototype",
+            "View prototype",
+            "Delete prototype",
+
+            "Create user",
+            "Edit user",
+            "View user",
+            "Delete user"
+
+        ],
+        "roles": [
+            {
+                "name": "Super Admin",
+                "permissions": [
+                    "View company",
+                    "Create company",
+                    "Edit company",
+                    "Delete company",
+        
+                    "View package",
+                    "Create package",
+                    "Edit package",
+                    "Delete package",
+        
+                    "View bill",
+                    "Create bill",
+                    "Edit bill",
+                    "Delete bill",
+        
+                    "View payment",
+                    "Create payment",
+                    "Edit payment",
+                    "Delete payment",
+        
+                    "View subscription",
+                    "Create subscription",
+                    "Edit subscription",
+                    "Delete subscription",
+        
+                    "View prototype",
+                    "Create prototype",
+                    "Edit prototype",
+                    "Delete prototype", 
+        
+                    "View user",
+                    "Create user",
+                    "Edit user",
+                    "Delete user"
+                ]
+            },
+            {
+                "name": "Company Admin",
+                "permissions": [
+                    "View company",
+                    "Edit company",
+                    "Delete company",
+        
+                    "View package",
+                    "Create package",
+                    "Edit package",
+                    "Delete package",
+        
+                    "View bill",
+                    "Create bill",
+                    "Edit bill",
+                    "Delete bill",
+        
+                    "View payment",
+                    "Create payment",
+                    "Edit payment",
+                    "Delete payment",
+        
+                    "View subscription",
+                    "Create subscription",
+                    "Edit subscription",
+                    "Delete subscription",
+        
+                    "View prototype",
+                    "Create prototype",
+                    "Edit prototype",
+                    "Delete prototype",
+        
+                    "View user",
+                    "Create user",
+                    "Edit user",
+                    "Delete user"
+
+                ]
+            },
+            {
+                "name": "User",
+                "permissions": [
+                    "View company",
+                          
+                    "View package",
+                    "Create package",
+                    "Edit package",
+                    "Delete package",
+        
+                    "View bill",
+                    "Create bill",
+                    "Edit bill",
+                    "Delete bill",
+        
+                    "View payment",
+                    "Create payment",
+                    "Edit payment",
+                    "Delete payment",
+        
+                    "View subscription",
+                    "Create subscription",
+                    "Edit subscription",
+                    "Delete subscription",
+        
+                    "View prototype",
+                    "Create prototype",
+                    "Edit prototype",
+                    "Delete prototype",
+        
+                    "View user",
+                    "Create user",
+                    "Edit user",
+                    "Delete user"
+
+
+                ]
+            }
+        ]
+    }
+]
